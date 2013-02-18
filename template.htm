@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+	<head>
+		<title>klange's résumé</title>
+		<meta charset="utf-8">
+		<style>
+			body {
+				font-family: sans-serif;
+			}
+			h2 {
+				font-size: 16px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>klange's résumé</h1>
+		<p>
+			The only maintained copy of my résumé is in the form of a %%SIZE%%MB PDF/ISO hybrid. I live in Tokyo and hold Japanese permanent residency. I am not interested in moving, but am open to remote work.
+		</p>
+		<p>
+			<a href="resume_iso.pdf">resume_iso.pdf</a> - This is both a PDF and a bootable ISO of my operating system, ToaruOS.
+		</p>
+		<p>
+		<a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a> (1GB RAM; Unknown/Other for OS type; otherwise default settings) is preferred for most use cases, but you will need to <strong>rename the file to end in ".iso"</strong> or download it <a href="resume_pdf.iso">from this link</a> instead.
+		</p>
+		<p>
+		Alternatively, you can use QEMU:
+		</p>
+		<pre>qemu-system-i386 -m 1G -cdrom https://r.dakko.us/resume_iso.pdf -M accel=kvm:tcg -soundhw ac97</pre>
+		<p>
+		If you want to run this on <a href="https://www.youtube.com/watch?v=1hz8fYghklw">real hardware</a>, you'll need a box with EFI and PS/2 mouse and keyboard (or functioning emulation). For BIOS boot, you'll need to hack something together in GRUB yourself.
+		</p>
+		<p>
+		If you wish to use the ISO with VMWare, please configure the VM for a 64-bit guest; the OS is not 64-bit, but this configuration selects optimal hardware for the best experience.
+		</p>
+		<pre><em>Latest release:</em> %%LATEST_RELEASE%%</pre>
+		<p style="clear: left;">
+			&copy; Copyright 2011-2018 K. Lange<br>
+			You should also take a look at <a href="https://github.com/klange">my GitHub profile</a>.<br>
+			<a href="https://gist.github.com/klange/c49d7836a53c922384ae90fe0ed0e16e">See here</a> for a writeup on how this works.
+		</p>
+	</body>
+</html>

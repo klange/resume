@@ -1,0 +1,140 @@
+% vim: ts=4 sw=4 noexpandtab
+% New Resume
+\documentclass[11pt,a4paper]{article}
+
+\usepackage{geometry}
+\geometry{
+	a4paper,
+	total={170mm,257mm},
+	left=20mm,
+	top=20mm,
+}
+
+\usepackage{array}
+\usepackage{minibox}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{makecell}
+\usepackage[T1]{fontenc}
+\setcellgapes{3pt}
+\let\oldmakecell\makecell
+\renewcommand\makecell[2][cc]{\renewcommand\cellalign{#1}\oldmakecell{#2}}
+
+\pagenumbering{gobble}
+
+\newif\ifmkiso
+
+\mkisotrue
+
+\ifmkiso
+	% Pull in embedfile
+	\usepackage{embedfile}
+	% Disable compression
+	\pdfcompresslevel=0
+	\pdfobjcompresslevel=0
+\fi
+
+\usepackage[overlap, CJK]{ruby}
+
+\usepackage{helvetica}
+
+\ifmkiso
+ \embedfile{resume.dat}
+\fi
+
+
+\begin{document}
+\begin{CJK}{UTF8}{goth}
+
+\center{\textbf{\large{K. Lange}}}
+
+\hfill\break
+
+\begin{tabularx}{\textwidth}{ p{20mm} X }
+	\textbf{Contact} \newline \textbf{Information} &
+	\begin{tabular}[t]{@{}rlrl@{}}
+		\underline{Email:}  & klange@toaruos.org        &  \underline{Github:} & https://github.com/klange \\
+		\underline{Phone:}  & (available on request)    & & \\
+	\end{tabular}
+\end{tabularx}
+
+\hfill\break
+
+\begin{tabularx}{\textwidth}{ p{20mm} X}
+	\textbf{Work} \newline \textbf{History} &
+	{\bf Software Engineer,} Mujin, Inc., Tokyo, Japan \hfill {\scriptsize 4/2017 -}
+	\begin{itemize}[noitemsep,nolistsep]
+		\item Developed industrial motion planning systems, device drivers, and system infrastructure.
+	\end{itemize}
+	{\bf Software Engineer, i18n/Infra,} Yelp, Inc., San Francisco, CA \hfill {\scriptsize 6/2012 - 3/2017}
+	\begin{itemize}[noitemsep,nolistsep]
+		\item Developed several internal libraries used by Yelp to support microservices.
+		\item Maintained open-source middleware libraries used by Yelp.
+		\item Rearchitected Yelp's handling of ``User Generated Content'' to support Japanese text.
+		\item Improved Yelp's handling of Japanese text in search and review content.
+		\item Led development of Yelp's support for search and business listings in Taiwan.
+		\item Developed and led projects for Yelp's Android application for Japanese users.
+	\end{itemize}
+	{\bf Software Engineer Intern, IMG,} Apple, Inc., Cupertino, CA \hfill {\scriptsize 5/2011 - 8/2011}
+	\begin{itemize}[noitemsep,nolistsep]
+		\item Designed and developed software framework for testing ``Retina'' graphics modes in OS X (Lion).
+	\end{itemize}
+	{\bf Software Developer,} Cleveland Motion Controls, Inc., Cleveland, OH \hfill {\scriptsize 6/2007 - 11/2008}
+	\begin{itemize}[noitemsep,nolistsep]
+		\item Rearchitected client configuration software using .NET frameworks.
+		\item Developed client tools for ARINC compliance testing.
+		\item Managed corporate network infrastructure and IIS installation.
+	\end{itemize}
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{ p{20mm} X}
+	\textbf{Projects} &
+	{\bf ToaruOS - Hobby Operating System} \hfill {\scriptsize 1/2011 -}
+	\begin{itemize}[noitemsep,nolistsep]
+		\item Hobby x86 operating system
+		\item Open-source, built entirely from scratch
+		\item Ports of GCC, Python 3.6, Quake
+		\item Composited GUI, dynamic linking, loadable kernel modules
+	\end{itemize}
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{ p{20mm} X}
+	\textbf{Education} &
+	{\bf BS, Computer Science,} University of Illinois at Urbana-Champaign \hfill {\scriptsize 2009 - 2012}
+	\begin{itemize}[noitemsep,nolistsep]
+		\item Minor in International Studies in Engineering, Japan.
+		\item Active member of the Association for Computer Machinery student chapter.
+	\end{itemize}
+	\hfill \break
+	{\bf Foreign Exchange,} 広島工業大学 Hiroshima Institute of Technology \hfill {\scriptsize Summer, 2010}
+	\begin{itemize}[noitemsep,nolistsep]
+		\item Cultural, engineering, and intensive language exchange program.
+	\end{itemize}
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{ p{20mm} X}
+	\textbf{Hobbies} &
+	{\bf Music Event Photography}
+	\begin{itemize}[noitemsep,nolistsep]
+		\item Contracted to photograph DJ events in Tokyo, Sapporo, Tateyama.
+		\item Photos have been published in CD jackets.
+	\end{itemize}
+\end{tabularx}
+
+\begin{tabularx}{\textwidth}{ p{20mm} X}
+	\textbf{Languages} &
+	\textbf{Programming} \newline Python, C; x86 assembly, C++, JavaScript, C\#, Java, Perl, Ruby, Visual Basic (6, .NET), MIPS assembly. \newline
+	\textbf{Natural} \newline English (native); Japanese (intermediate); Spanish (limited); American Sign Language (basic)
+\end{tabularx}
+
+
+\hfill \break
+
+\begin{tabularx}{\textwidth}{ p{20mm} X}
+	\textbf{Visa} &
+	\textbf{US:} Citizen \newline
+	\textbf{Japan:} Permanent Resident
+\end{tabularx}
+
+\end{CJK}
+\end{document}
